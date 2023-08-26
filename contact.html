@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-opinionly/favicon-16.png">
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="styles/swiper-bundle.min.css"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Opinionly</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo left">
+            <a href="/index.html"><img src="/assets/opinionly-logo-full.svg" alt="Logo"></a>
+        </div>
+
+        <div class="links center">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button>Register</button></a>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="search-btn" onclick="searchToggle()">
+                <img src="/assets/search-icon-menu.png" alt="Search button">
+            </div>
+
+            <div class="menu" onclick="popupToggle()">
+                <img src="/assets/menu 1.png" alt="Menu Image">
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="search-box hide">
+        <input type="search" placeholder="Enter your search here...">
+        <button><img src="/assets/search 2.png" alt="Main Search Button Image"></button>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <img src="/assets/background.png" alt="Contact Header">
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact <b>Form</b></h2>
+            <form action="">
+                <input type="text" placeholder="Full Name..." id="contactName">
+                <input type="email" placeholder="Email ID..." id="contactEmail">
+                <input type="text" placeholder="Subject..." id="contactSubject">
+                <textarea placeholder="Enter your message here..." id="contactText" cols="30" rows="10"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <div class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button id="registerBtn">Register</button></a>
+            </ul>
+
+            <div class="close-btn" onclick="popupToggle()">&times;</div>
+        </div>
+    </div>
+
+    <!-- Swiper Js -->
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
+
+    <!-- JS -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-opinionly/favicon-16.png">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Opinionly</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo left">
+            <a href="/index.html"><img src="/assets/opinionly-logo-full.svg" alt="Logo"></a>
+        </div>
+
+        <div class="links center">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button>Register</button></a>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="search-btn" onclick="searchToggle()">
+                <img src="/assets/search-icon-menu.png" alt="Search button">
+            </div>
+
+            <div class="menu" onclick="popupToggle()">
+                <img src="/assets/menu 1.png" alt="Menu Image">
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="search-box hide">
+        <input type="search" placeholder="Enter your search here...">
+        <button><img src="/assets/search 2.png" alt="Main Search Button Image"></button>
+    </div>
+
+    <div class="about-container">
+        <div class="about-header">
+            <img src="/assets/welcome-head-img.png" alt="Welcome Image">
+            <h2>Welcome to <b>Opinionly</b></h2>
+        </div>
+
+        <h2 class="aboutus-heading">About <b>Us</b></h2>
+        <div class="carousel-container">
+            <div class="about-carousel mySwiper">
+                <div class="about-content swiper-wrapper">
+                    <div class="about-slide swiper-slide">
+                        <span>#1</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eligendi amet distinctio
+                            numquam illum, dolore ex quae temporibus beatae minima.</p>
+                    </div>
+
+                    <div class="about-slide swiper-slide">
+                        <span>#2</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eligendi amet distinctio
+                            numquam illum, dolore ex quae temporibus beatae minima.</p>
+                    </div>
+
+                    <div class="about-slide swiper-slide">
+                        <span>#3</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eligendi amet distinctio
+                            numquam illum, dolore ex quae temporibus beatae minima.</p>
+                    </div>
+
+                    <div class="about-slide swiper-slide">
+                        <span>#4</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eligendi amet distinctio
+                            numquam illum, dolore ex quae temporibus beatae minima.</p>
+                    </div>
+                </div>
+                <div class="swiper-button-next slide-nav"></div>
+                <div class="swiper-button-prev slide-nav"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <h2 class="terminology top">Term<b>inologies</b></h2>
+        <div class="carousel-container">
+            <div class="about-carousel mySwiper">
+                <div class="about-content swiper-wrapper">
+
+                    <div class="about-slide swiper-slide">
+                        <span>#1</span>
+
+                        <div class="slide-text">
+
+                            <div class="left">
+                                <span class="term-upvote">20 <b>&uparrow;</b></span>
+                                <p class="term-up-p">Upvote</p>
+                            </div>
+                            <p class="slide-desc">The term "Upvote" is used as a benchmark to help analyze and know how
+                                many people agree with a certain opinion. Opinions with higher upvotes are suggested to
+                                new users with similar questions, since that opinion is agreed upon by the majority.
+                                Opinions with low downvotes have high upvotes and are suggested more to people with
+                                similar questions.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="about-slide swiper-slide">
+                        <span>#2</span>
+
+                        <div class="slide-text">
+
+                            <div class="left down">
+                                <span class="term-downvote">20 <b>&downarrow;</b></span>
+                                <p class="term-down-p">Downvote</p>
+                            </div>
+                            <p class="slide-desc">The term "Downvote" is used as a benchmark to help analyze and know
+                                how
+                                many people disagree with a certain opinion. Opinions with higher downvotes are least
+                                suggested as a large amount of people disagree. Opinions with low downvotes have high
+                                upvotes and are suggested more to people with similar questions.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="about-slide swiper-slide">
+                        <span>#3</span>
+
+                        <div class="slide-text">
+
+                            <div class="left">
+                                <span class="term-upvote">20 <b>&uparrow;</b></span>
+                                <p>Upvote</p>
+                            </div>
+                            <p class="slide-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
+                                eligendi amet distinctio
+                                numquam illum, dolore ex quae temporibus beatae minima.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="about-slide swiper-slide">
+                        <span>#4</span>
+
+                        <div class="slide-text">
+
+                            <div class="left">
+                                <span class="term-upvote">20 <b>&uparrow;</b></span>
+                                <p>Upvote</p>
+                            </div>
+                            <p class="slide-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
+                                eligendi amet distinctio
+                                numquam illum, dolore ex quae temporibus beatae minima.</p>
+                        </div>
+
+                    </div> -->
+                </div>
+                <div class="swiper-button-next slide-nav"></div>
+                <div class="swiper-button-prev slide-nav"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <h2 class="aboutus-heading top center">Meet the <b>Team</b></h2>
+        <div class="team-section">
+            <div class="team-member">
+                <div class="image">
+                    <img src="/assets/billie.jpeg" alt="">
+                </div>
+                <div class="name">
+                    <h3>Odii Daniel</h3>
+                </div>
+                <div class="role">
+                    <p>Backend Developer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image">
+                    <img src="/assets/billie.jpeg" alt="">
+                </div>
+                <div class="name">
+                    <h3>Adindu Chizzy</h3>
+                </div>
+                <div class="role">
+                    <p>Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button id="registerBtn">Register</button></a>
+            </ul>
+
+            <div class="close-btn" onclick="popupToggle()">&times;</div>
+        </div>
+    </div>
+
+    <!-- Swiper Js -->
+    <script src="/js/swiper-bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

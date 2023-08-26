@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-opinionly/favicon-16.png">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Opinionly</title>
+</head>
+<body>
+    <nav>
+        <div class="logo left">
+            <a href="/index.html"><img src="/assets/opinionly-logo-full.svg" alt="Logo"></a>
+        </div>
+
+        <div class="links center">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button>Register</button></a>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="search-btn" onclick="searchToggle()">
+                <img src="/assets/search-icon-menu.png" alt="Search button">
+            </div>
+
+            <div class="menu" onclick="popupToggle()">
+                <img src="/assets/menu 1.png" alt="Menu Image">
+            </div>
+        </div>
+        
+    </nav>
+
+    <div class="search-box hide">
+        <input type="search" placeholder="Enter your search here...">
+        <button><img src="/assets/search 2.png" alt="Main Search Button Image"></button>
+    </div>
+
+    <div class="add-question">
+        <textarea placeholder="Ask your question..." id="questionContainer" cols="30" rows="10"></textarea>
+        <button>Ask</button>
+    </div>
+
+    <div class="feed-container">
+
+        <div class="feed">
+            <div class="user-image">
+                <img src="/assets/billie.jpeg" alt="User image" srcset="">
+                <p>Anonymous</p>
+                <p>Posted 24 hours ago</p>
+                <p>3 Opinions</p>
+            </div>
+
+            <div class="user-text">
+                <a href="/vote.html"><h3>This is me when I go to see what life is all about</h3></a>
+                <div class="feed-stat">
+                    <div class="vote">
+                        <span class="upvote">20 &UpArrow;</span>
+                        <span class="downvote">10 &DownArrow;</span>
+                    </div>
+                    <span class="material-symbols-rounded">&#xe6b8;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="user-image">
+                <img src="/assets/billie.jpeg" alt="User image" srcset="">
+                <p>Anonymous</p>
+                <p>Posted 24 hours ago</p>
+                <p>3 Opinions</p>
+            </div>
+
+            <div class="user-text">
+                <a href="/vote.html"><h3>This is me when I go to see what life is all about</h3></a>
+                <div class="feed-stat">
+                    <div class="vote">
+                        <span class="upvote">20 &UpArrow;</span>
+                        <span class="downvote">10 &DownArrow;</span>
+                    </div>
+                    <span class="material-symbols-rounded">&#xe6b8;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="user-image">
+                <img src="/assets/billie.jpeg" alt="User image" srcset="">
+                <p>Anonymous</p>
+                <p>Posted 24 hours ago</p>
+                <p>3 Opinions</p>
+            </div>
+
+            <div class="user-text">
+                <a href="/vote.html"><h3>This is me when I go to see what life is all about</h3></a>
+                <div class="feed-stat">
+                    <div class="vote">
+                        <span class="upvote">20 &UpArrow;</span>
+                        <span class="downvote">10 &DownArrow;</span>
+                    </div>
+                    <span class="material-symbols-rounded">&#xe6b8;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="user-image">
+                <img src="/assets/billie.jpeg" alt="User image" srcset="">
+                <p>Anonymous</p>
+                <p>Posted 24 hours ago</p>
+                <p>3 Opinions</p>
+            </div>
+
+            <div class="user-text">
+                <a href="/vote.html"><h3>This is me when I go to see what life is all about</h3></a>
+                <div class="feed-stat">
+                    <div class="vote">
+                        <span class="upvote">20 &UpArrow;</span>
+                        <span class="downvote">10 &DownArrow;</span>
+                    </div>
+                    <span class="material-symbols-rounded">&#xe6b8;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="user-image">
+                <img src="/assets/billie.jpeg" alt="User image" srcset="">
+                <p>Anonymous</p>
+                <p>Posted 24 hours ago</p>
+                <p>3 Opinions</p>
+            </div>
+
+            <div class="user-text">
+                <a href="/vote.html"><h3>This is me when I go to see what life is all about</h3></a>
+                <div class="feed-stat">
+                    <div class="vote">
+                        <span class="upvote">20 &UpArrow;</span>
+                        <span class="downvote">10 &DownArrow;</span>
+                    </div>
+                    <span class="material-symbols-rounded">&#xe6b8;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="user-image">
+                <img src="/assets/billie.jpeg" alt="User image" srcset="">
+                <p>Anonymous</p>
+                <p>Posted 24 hours ago</p>
+                <p>3 Opinions</p>
+            </div>
+
+            <div class="user-text">
+                <a href="/vote.html"><h3>This is me when I go to see what life is all about</h3></a>
+                <div class="feed-stat">
+                    <div class="vote">
+                        <span class="upvote">20 &UpArrow;</span>
+                        <span class="downvote">10 &DownArrow;</span>
+                    </div>
+                    <span class="material-symbols-rounded">&#xe6b8;</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button id="registerBtn">Register</button></a>
+            </ul>
+
+            <div class="close-btn" onclick="popupToggle()">&times;</div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-opinionly/favicon-16.png">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Opinionly</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo left">
+            <a href="/index.html"><img src="/assets/opinionly-logo-full.svg" alt="Logo"></a>
+        </div>
+
+        <div class="links center">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button>Register</button></a>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="search-btn" onclick="searchToggle()">
+                <img src="/assets/search-icon-menu.png" alt="Search button">
+            </div>
+
+            <div class="menu" onclick="popupToggle()">
+                <img src="/assets/menu 1.png" alt="Menu Image">
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="search-box hide">
+        <input type="search" placeholder="Enter your search here...">
+        <button><img src="/assets/search 2.png" alt="Main Search Button Image"></button>
+    </div>
+
+    <div class="vote-container">
+
+        <div class="opinion-section">
+
+            <div class="opinion-answer">
+                <div class="user-image">
+                    <img src="/assets/billie.jpeg" alt="User Image">
+                </div>
+                <div class="opinion">
+                    <h3>This is me when I go to see what life is all about ?<span class="material-symbols-rounded">&#xe6b8;</span></h3>
+                </div>
+            </div>
+
+            <div class="opinion-stat">
+                <div class="opinion-publish-date">
+                    <p>Anonymous</p>
+                    <p>Posted 24 hours ago</p>
+                    <p>3 Opinions</p>
+                </div>
+                <div class="opinion-vote">
+                    <span class="upvote">20&UpArrow;</span>
+                    <span class="downvote">10&DownArrow;</span>
+                </div>
+            </div>
+
+        </div>
+
+        <h4>Opinions</h4>
+        <hr>
+
+        <div class="vote-opinion">
+
+            <div class="vote-feed">
+                <h5>Saying okay is okay when you're okay, so when I said youre right you are</h5>
+                <div class="vote-opinion-buttons">
+                    <button class="opinion-upvote">20 <b>&uparrow;</b></button>
+                    <button class="opinion-downvote">10 <b>&downarrow;</b></button>
+                </div>
+            </div>
+
+            <div class="vote-feed">
+                <h5>Saying okay is okay when you're okay, so when I said youre right you are</h5>
+                <div class="vote-opinion-buttons">
+                    <button class="opinion-upvote">20 <b>&uparrow;</b></button>
+                    <button class="opinion-downvote">10 <b>&downarrow;</b></button>
+                </div>
+            </div>
+
+            <div class="vote-feed">
+                <h5>Saying okay is okay when you're okay, so when I said youre right you are</h5>
+                <div class="vote-opinion-buttons">
+                    <button class="opinion-upvote">20 <b>&uparrow;</b></button>
+                    <button class="opinion-downvote">10 <b>&downarrow;</b></button>
+                </div>
+            </div>
+
+            <div class="new-opinion">
+                <textarea placeholder="Add new opinion" id="opinionContainer" cols="30" rows="10"></textarea>
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="comment-section">
+            <h5><b>3</b> comments</h5>
+            <div class="comments">
+                <div class="opinion-comment">
+                    <div class="image">
+                        <img src="/assets/billie.jpeg" alt="User Image">
+                    </div>
+                    <p>Sit in my roof, being so thanfull, look at that car I paid for</p>
+                </div>
+
+                <div class="opinion-comment">
+                    <div class="image">
+                        <img src="/assets/billie.jpeg" alt="User Image">
+                    </div>
+                    <p>Sit in my roof, being so thanfull, look at that car I paid for</p>
+                </div>
+
+                <div class="opinion-comment">
+                    <div class="image">
+                        <img src="/assets/billie.jpeg" alt="User Image">
+                    </div>
+                    <p>Sit in my roof, being so thanfull, look at that car I paid for</p>
+                </div>
+            </div>
+            <div class="new-comment">
+                <textarea placeholder="Enter your comment" id="commentContainer" cols="30" rows="10"></textarea>
+                <button>Comment</button>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="popup">
+        <div class="overlay"></div>
+        <div class="content">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <a href="/register.html"><button id="registerBtn">Register</button></a>
+            </ul>
+
+            <div class="close-btn" onclick="popupToggle()">&times;</div>
+        </div>
+    </div>
+
+    <!-- Swiper Js -->
+    <script src="/js/swiper-bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

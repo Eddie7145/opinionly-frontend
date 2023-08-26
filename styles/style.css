@@ -1,0 +1,2615 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Mulish";
+}
+
+.hide{
+    display: none !important;
+}
+
+.top{
+    margin-top: 5rem !important;
+}
+
+.center{
+    text-align: center !important;
+}
+
+html{
+    font-size: 1rem;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    padding: 0.2rem;
+    /* position: relative; */
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+@media screen and (min-width: 800px){
+    body{
+        padding: 0.5rem;
+    }
+
+    nav{
+        width: 100%;
+        height: 10vh;
+        border-bottom: 1px solid #08b74f;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .links{
+        /* border: 1px solid red; */
+        width: 50%;
+    }
+
+    .links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .links ul li{
+        list-style: none;
+        font-size: 1rem;
+        transition: .2s ease-in-out;
+    }
+
+    .links ul li:hover{
+        font-weight: 600;
+        border-bottom: 2px solid #08b74f;
+    }
+
+    .links ul li a{
+        text-decoration: none;
+        font-family: "Mulish";
+        color: #00002f;
+        font-weight: 500;
+    }
+
+    .links ul button{
+        border: 2px solid #00002f;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 0.5rem 1.5rem;
+        font-family: 'poppins';
+        font-weight: 500;
+        color: #00002f;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    .links ul button:hover{
+        background-color: #00002f;
+        color: #08b74f;
+        font-weight: 800;
+    }
+
+    .search-box{
+        width: 100%;
+        height: 5vh;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .search-box input{
+        width: 95%;
+        height: inherit;
+        color: #00002f;
+        font-weight: 500;
+        font-family: "Mulish";
+        outline: none;
+        border: 2px solid #08b74f;
+        padding-left: 0.5rem;
+    }
+
+    .search-box button{
+        width: 5%;
+        height: inherit;
+        border: 2px solid #00002f;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo a{
+        width: 100px;
+        height: 100px;
+        /* border: 1px solid green; */
+    }
+
+    .logo img{
+        width: inherit;
+        height: inherit;
+        object-fit: contain;
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        width: auto;
+        height: auto;
+    }
+
+    .right .search-btn{
+        width: 30px;
+        height: 30px;
+        /* border: 1px solid red; */
+        cursor: pointer;
+    }
+
+    .right .search-btn img{
+        width: inherit;
+        height: inherit;
+    }
+
+    .right .menu{
+        display: none;
+    }
+
+    .feed-container{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+    }
+
+    .popup{
+        display: none !important;
+    }
+
+    .feed-container .feed{
+        width: inherit;
+        height: auto;
+        /* border: 1px solid green; */
+        padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+        box-shadow: 20px 2px 10px 5px #9b9a9a0a;
+        margin-bottom: 1rem;
+    }
+
+    .feed-container .feed .user-image{
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .feed-container .feed .user-image p{
+        font-family: "Mulish";
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #9b9a9a;
+    }
+
+    .feed-container .feed .user-image img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #08b74f;
+    }
+
+    .feed-container .feed .user-text .feed-stat{
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .feed-container .feed .user-text .feed-stat .material-symbols-rounded{
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0, 0, 47, 0.738);
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-shadow: 2px 2px 2px #00002f2c;
+        /* border: 1px solid red; */
+        padding: 0.3rem;
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote span{
+        font-family: "Poppins";
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote .upvote{
+        color: rgb(44, 143, 255);
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote .downvote{
+        color: red;
+    }
+
+    .feed-container .feed .user-text a{
+        text-decoration: none;
+    }
+
+    .feed-container .feed .user-text h3{
+        font-family: "Mulish";
+        font-size: 1rem;
+        color: #08b74f;
+        letter-spacing: 0.8px;
+    }
+
+    /* ADD QUESTION CSS */
+    .add-question{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        /* border: 1px solid red; */
+        box-shadow: 1px 1px 10px 1px #9b9a9a17;
+        padding: 1rem;
+    }
+
+    .add-question textarea{
+        width: 60%;
+        height: 10vh;
+    }
+
+    .add-question button{
+        padding: 0.3rem 0.5rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #00002f;
+        background-color: transparent;
+        border: 1px solid #00002f;
+        border-radius: 5px;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .add-question button:hover{
+        background-color: #08b74eaa;
+        color: #00002f;
+    }
+
+    /* ABOUT SECTION */
+    .about-container{
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid red; */
+    }
+
+    .about-container .about-header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-container .about-header img{
+        width: inherit;
+        height: inherit;
+    }
+
+    .about-container .about-header h2{
+        position: absolute;
+        /* top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        width: 79%;
+        height: auto;
+        text-align: center;
+        /* border: 1px solid red; */
+        font-family: "Mulish";
+        font-weight: 600;
+        font-size: 3rem;
+        color: #ffffff;
+    }
+
+    .about-container .about-header h2 b{
+        font-family: "Poppins";
+        font-size: 3rem;
+        color: #08b74f;
+    }
+
+    .about-container h2{
+        font-family: "Poppins";
+        color: #00002f;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .about-container b{
+        font-family: "Poppins";
+        color: #08b74f;
+        font-size: 1.5rem;
+    }
+
+    .carousel-container{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        padding: 0.5rem;
+        box-shadow: -.2px 2px 10px 5px rgba(0, 0, 0, 0.148);
+        border-radius: 10px;
+    }
+
+    .about-carousel{
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        background-color: #00002f21;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .about-carousel .about-slide{
+        width: inherit;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        line-height: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.23);
+    }
+
+    .about-slide span{
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+        font-family: "Poppins";
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #08b74f;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.285);
+    }
+
+    .about-slide p{
+        text-align: center;
+        padding: 19px;
+        font-family: "Mulish";
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #00002f;
+    }
+
+    .about-slide .slide-text{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-slide .slide-text .left{
+        /* border: 1px solid green; */
+        width: 40%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 1px 1px 20px 5px #9b9a9a29;
+        margin-top: 10px;
+    }
+
+    .about-slide .slide-text .left span{
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+
+    .about-slide .slide-text .left .term-up-p{
+        font-size: 1rem;
+        font-size: 400;
+        color: rgb(44, 143, 255);
+    }
+
+    .term-upvote{
+        background-color: rgba(44, 143, 255, 0.185);
+        padding: 1rem;
+        border-radius: 50%;
+        color: rgb(44, 143, 255) !important;
+        font-weight: 600 !important;
+    }
+
+    .term-upvote b{
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: rgb(44, 143, 255);
+    }
+
+    .term-downvote{
+        background-color: rgba(255, 0, 0, 0.264);
+        padding: 1rem;
+        border-radius: 50%;
+        color: red !important;
+        font-weight: 600 !important;
+    }
+
+    .term-downvote b{
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: red;
+    }
+
+    .term-down-p{
+        color: red !important;
+    }
+
+    .slide-desc{
+        text-align:justify !important;
+    }
+
+    .terminology{
+        text-align: right;
+    }
+
+    .team-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid green; */
+        margin-top: 1rem;
+        gap: 2rem;
+        /* padding: 0 2rem; */
+    }
+
+    .team-member{
+        width: 30%;
+        height: 50vh;
+        border: 1px solid #08b74e45;
+        box-shadow: 1px 1px 20px 5px #9b9a9a29;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .team-member .image{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 8px 5px #9b9a9a29;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .team-member .image img{
+        width: inherit;
+        height: inherit;
+        border: 4px solid #00002f;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+
+    .team-member .name{
+        width: auto;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .team-member .name h3{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        color: #08b74f;
+        font-weight: 700;
+    }
+
+    .team-member .role{
+        width: auto;
+        text-align: center;
+        margin-top: 0.2rem;
+    }
+
+    .team-member .role p{
+        font-size: 0.8rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #00002f82;
+    }
+
+    /* Contact CSS */
+    .contact-container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+
+    .contact-container .contact-header{
+        width: 100%;
+        height: 40vh;
+        /* border: 1px solid red; */
+        position: relative;
+    }
+
+    .contact-container .contact-header img{
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+    }
+
+    .contact-container .contact-form{
+        width: 50%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+        position: absolute;
+        top: 15rem;
+        box-shadow: 1px 1px 8px 5px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .contact-container .contact-form h2{
+        font-size: 1.2rem;
+        font-family: "Mulish";
+        font-weight: 700;
+        color: #00002f;
+    }
+
+    .contact-container .contact-form h2 b{
+        font-size: 1.2rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #08b74f;
+    }
+    
+    .contact-container .contact-form form{
+        width: 80%;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-container .contact-form form input, textarea{
+        width: 100%;
+        padding: 0.5rem;
+        color: #00002f;
+        font-family: "Poppins";
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 4px 5px 4px 1px #00002f0b;
+        border: 1px solid #00002f64;
+        transition: .3s ease-in-out;
+        resize: none;
+    }
+
+    .contact-container .contact-form form textarea{
+        height: 15vh;
+    }
+
+    .contact-container .contact-form form input:focus, textarea:focus{
+        box-shadow: 8px 8px 1px 1px rgba(0, 0, 0, 0.149);
+    }
+
+    .contact-container .contact-form form button{
+        font-family: "Mulish";
+        padding: 0.5rem 1.5rem;
+        background-color: #00002f;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        transition: .2s ease;
+        cursor: pointer;
+    }
+
+    .contact-container .contact-form form button:hover{
+        background-color: #08b74f;
+        color: #00002f;
+        font-weight: 800;
+    }
+
+    /* Register CSS */
+    .register-container-main {
+        width: 100%;
+        height: auto;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        /* border: 1px solid red; */
+        margin-top: 2rem;
+    }
+
+    .register-container-main .register-container {
+        width: 100%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .register-container-main .register-container .register-image-section {
+        width: 100%;
+        height: inherit;
+    }
+
+    .register-container-main .register-container .register-image-section img {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+    }
+
+    .register-container-main .register-container .register-form-section {
+        width: 100%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+    .register-container-main .register-container .register-form-section .external-buttons {
+        width: auto;
+        border-radius: 50px;
+        border: 1px solid rgba(0, 0, 47, 0.337);
+        box-shadow: 1px 1px 5px 5px rgba(155, 154, 154, 0.055);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: .75rem;
+        margin-top: 2rem;
+        position: relative;
+    }
+
+    .register-container-main .register-container .register-form-section .external-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 47, 0.094);
+        cursor: pointer;
+        transition: .2s ease;
+        /* border: 1px solid red; */
+    }
+
+    .register-container-main .register-container .register-form-section .external-buttons button img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .register-container .register-form-section .external-buttons button:hover {
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 47, 0.337);
+        box-shadow: 1px 1px 5px 5px rgba(155, 154, 154, 0.055);
+    }
+
+    .register-form-section .register-divider{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 75%;
+        /* border: 1px solid red; */
+        font-family: "Poppins";
+        font-weight: 500;
+        color: #00002f5c;
+    }
+
+    .register-form-section .register-divider hr{
+        width: 100%;
+    }
+
+    .register-container-main .register-container .register-form-section .register-section-image {
+        position: absolute;
+        top: -1.05rem;
+        right: 0.5rem;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+    }
+
+    .register-form-section .register-form-container {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin-top: 5em;
+        /* border: 1px solid red; */
+    }
+
+    .register-form-container .form-container {
+        position: inherit;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }
+
+    .register-form-container .form-container button {
+        cursor: pointer;
+        outline: none;
+        text-transform: capitalize;
+        transition: 0.5s ease;
+        z-index: 2;
+    }
+
+    .register-form-container .form-container .form-toggle-buttons {
+        position: absolute;
+        top: -3rem;
+        /* border: 1px solid red; */
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+
+    .register-form-container .form-container .form-toggle-buttons button {
+        border: none;
+        border-radius: 20px 20px 0 0;
+        padding: 0.8rem;
+        font-family: "Poppins";
+        font-weight: 500;
+        transition: 0.2s ease;
+        color: #00002f;
+    }
+
+    .form-container .form-toggle-buttons #sign-in-toggle {
+        box-shadow: 1px 1px 8px 2px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px 10px 0 0;    
+        /* border: 2px solid rgb(8, 183, 79, 0.5); */
+    }
+
+    .form-container .form-toggle-buttons #sign-up-toggle {
+        box-shadow: 1px 1px 8px 2px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px 10px 0 0;    
+        /* border: 2px solid rgb(0, 0, 47, 0.5); */
+    }
+
+    .register-form-container .form-container .sign-in,
+    .register-form-container .form-container .sign-up {
+        font-family: "Mulish";
+        padding: 0.5rem 1.5rem;
+        background-color: #00002f;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        margin: auto;
+        transition: .2s ease;
+    }
+
+    .form-container .sign-in:hover,
+    .form-container .sign-up:hover {
+        background-color: #08b74f;
+        color: #00002f;
+        font-size: 700;
+    }
+
+    .register-form-container .form-container form {
+        position: relative;
+        width: 100%;
+        padding: 2em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 8px 5px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px;
+        gap: 0.8rem;
+    }
+
+    .form-container input {
+        position: relative;
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 1.2em 1.7em;
+        color: #00002f;
+        font-family: "Poppins";
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 4px 5px 4px 1px #00002f0b;
+        border: 1px solid #00002f64;
+        transition: .3s ease-in-out;
+        transition: 0.2s;
+    }
+
+    .form-container input:focus {
+        box-shadow: 8px 8px 1px 1px rgba(0, 0, 0, 0.149);
+    }
+
+    .form-container #sign-in-form,
+    .form-container #sign-up-form {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    .form-container #sign-in-form button,
+    .form-container #sign-up-form button {
+        margin-top: 0.5em;
+    }
+
+    .form-container #sign-in-form a {
+        font-family: "Mulish";
+        font-size: 0.7em;
+        color: #08B74F;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        transition: 0.3s;
+    }
+
+    .form-container #sign-in-form a:hover {
+        color: #00002f;
+    }
+
+    .form-container #sign-up-form {
+        display: none;
+    }
+
+    .form-container #sign-up-form .terms-check {
+        display: flex;
+        margin-top: 0.2em;
+        margin-bottom: 1em;
+    }
+
+    .form-container #sign-up-form .terms-check input {
+        margin: 0;
+        width: 6%;
+    }
+
+    .form-container #sign-up-form .terms-check h5 {
+        margin-left: 5px;
+        font-weight: 300;
+        color: #00002f;
+        font-family: "Mulish";
+        font-size: 0.8em;
+    }
+
+    .form-container #sign-up-form .terms-check h5 a {
+        font-family: "Mulish";
+        color: #08B74F;
+        font-weight: 400;
+        transition: 0.3s;
+    }
+
+    .form-container #sign-up-form .terms-check h5 a:hover {
+        color: #00002f;
+    }
+
+    /* Vote CSS */
+
+    .vote-container{
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .vote-container hr{
+        width: 80%;
+
+    }
+
+    .vote-container h4{
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        color: #00002f;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .vote-container .opinion-section{
+        width: 95%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        border: 1px solid #08b74e45;
+        box-shadow: 1px 1px 10px 1px #9b9a9a17;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+    }
+
+    .vote-container .opinion-section .opinion-answer{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .opinion-answer .user-image{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .opinion-answer .user-image img{
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        border: 3px solid green;
+        object-fit: cover;
+    }
+
+    .opinion-answer .opinion{
+        width: 100%;
+        height: auto;
+    }
+
+    .opinion-answer .opinion h3{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #00002f;
+        display: flex;
+        align-items:last baseline;
+        justify-content: space-between;
+    }
+
+    .opinion-answer .material-symbols-rounded{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #08B74F;
+        font-size: 1.5rem;
+        font-weight: 400;
+        /* text-shadow: 2px 2px 2px #00002f2c; */
+        /* border: 1px solid red; */
+        padding: 0.3rem;
+    }
+
+    .opinion-section .opinion-stat{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        padding: 0.5rem;
+    }
+
+    .opinion-section .opinion-stat .opinion-publish-date{
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .opinion-stat .opinion-publish-date p{
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #9b9a9a;
+        font-family: "Mulish";
+    }
+
+    .opinion-stat .opinion-vote{
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .opinion-stat .opinion-vote span{
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+
+    .opinion-stat .opinion-vote span.upvote{
+        color: rgb(44, 143, 255);
+        text-shadow: 2px 2px 1px #00002f1a;
+    }
+
+    .opinion-stat .opinion-vote span.downvote{
+        color: #ff0000;
+        text-shadow: 2px 2px 1px #00002f1a;
+    }
+
+    /* Upvote & Downvote CSS */
+
+    .vote-opinion{
+        width: 95%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 0.5rem;
+        padding: 0 0.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .vote-opinion .vote-feed{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #00002f0b;
+    }
+
+    .vote-opinion .vote-feed h5{
+        /* border: 1px solid green; */
+        width: 100%;
+        line-height: 1rem;
+        font-size: 1.05rem;
+        font-weight: 400;
+        font-family: "Poppins";
+        color: #00002f;
+        margin-bottom: 0.6rem;
+    }
+
+    .vote-opinion-buttons{
+        /* border: 1px solid red; */
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .vote-opinion-buttons button{
+        padding: 0.2rem 1rem;
+        display: flex;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: "Poppins";
+        cursor: pointer;
+    }
+
+    .vote-opinion-buttons .opinion-upvote{
+        background-color: rgba(44, 143, 255, 0.129);
+        color: rgb(44, 143, 255);
+        border: 1px solid rgb(44, 143, 255);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+        transition: .3s ease;
+        font-weight: 700;
+    }
+    
+    .vote-opinion-buttons .opinion-downvote{
+        background-color: rgba(255, 0, 0, 0.264);
+        color: red;
+        border: 1px solid red;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+        font-weight: 700;
+        transition: .3s ease;
+    }
+
+    .vote-opinion-buttons .opinion-downvote:hover{
+        background-color: red;
+        color: #ffffff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+    }
+
+    .vote-opinion-buttons .opinion-upvote:hover{
+        background-color: rgb(44, 143, 255);
+        color: #ffffff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+    }
+
+    .new-opinion{
+        width: 50% !important;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+        /* border: 1px solid red; */
+    }
+
+    .new-opinion textarea{
+        width: 100%;
+        height: 10vh;
+    }
+
+    .new-opinion button{
+        padding: 0.3rem 0.5rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #00002f;
+        background-color: transparent;
+        border: 1px solid #00002f;
+        border-radius: 5px;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .new-opinion button:hover{
+        background-color: #08b74eaa;
+        color: #00002f;
+    }
+
+    /* Comment CSS */
+
+    .comment-section{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+    }
+
+    .comment-section h5{
+        /* border: 1px solid red; */
+        width: 100%;
+        color: #00002f;
+        display: flex;
+        align-items: first baseline;
+        gap: 0.2rem;
+        font-size: 1.05rem;
+    }
+
+    .comment-section h5 b{
+        color: #08B74F;
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+
+    .comment-section .comments{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        gap: 0.5rem;
+        border: 1px solid #00002f0b;
+        padding: 0.5rem;
+    }
+
+    .comment-section .comments .opinion-comment{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .comment-section .comments .opinion-comment .image{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .comment-section .comments .opinion-comment .image img{
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        object-fit: cover;
+        border: 1px solid #08b74f;
+    }
+
+    .comment-section .comments .opinion-comment p{
+        color: #00002fd2;
+        font-size: 0.9rem;
+        font-weight: 400;
+        font-family: "Poppins";
+    }
+
+    .comment-section .new-comment{
+        width: 70%;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+        /* border: 1px solid red; */
+        padding: 1rem;
+    }
+
+    .comment-section .new-comment textarea{
+        width: 100%;
+        height: 14vh;
+    }
+
+    .comment-section .new-comment button{
+        padding: 0.3rem 0.5rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #ffffff;
+        background-color: #00002f;
+        border: none;
+        border-radius: 5px;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .comment-section .new-comment button:hover{
+        background-color: #08b74eaa;
+        color: #00002f;
+    }
+
+    /* Swiper Button CSS */
+    .slide-nav{
+        height: 30px;
+        width: 30px;
+        background-color: #00002f36;
+        border-radius: 5px;
+        /* transform: translateY(30px); */
+        transition: 0.2s ease;
+    }
+
+    .slide-nav:hover{
+        background-color: #00002f;
+    }
+
+    .slide-nav::after,
+    .slide-nav::before {
+        font-size: 15px;
+        color: #08b74f;
+    }
+
+    .swiper-pagination-bullet{
+        background-color: #00002f6b;
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: #08b74f;
+    }
+}
+
+@media (max-width: 798px){
+    /* NAVIGATION SECTION */
+    nav{
+        width: 100%;
+        height: 10vh;
+        border-bottom: 1px solid #08b74f;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .search-box{
+        width: 100%;
+        height: 5vh;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+
+    .search-box input{
+        width: 90%;
+        height: inherit;
+        color: #00002f;
+        font-weight: 500;
+        font-family: "Mulish";
+        outline: none;
+        border: 2px solid #08b74f;
+        padding-left: 0.5rem;
+    }
+
+    .search-box button{
+        width: 10%;
+        height: inherit;
+        border: 2px solid #00002f;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo a{
+        width: 100px;
+        height: 50px;
+        /* border: 1px solid green; */
+    }
+
+    .logo img{
+        width: inherit;
+        height: inherit;
+        object-fit: contain;
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        width: auto;
+        height: auto;
+    }
+
+    .right .search-btn{
+        width: 30px;
+        height: 30px;
+        /* border: 1px solid red; */
+    }
+
+    .right .search-btn img{
+        width: inherit;
+        height: inherit;
+    }
+
+    .right .menu{
+        width: 30px;
+        height: 30px;
+        background-color: #00002f;
+        border-radius: 5px;
+        /* border: 1px solid red; */
+    }
+
+    .right .menu img{
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+    }
+
+    /* POPUP SECTION */
+
+    .popup{
+        display: none;
+    }
+
+    .popup .overlay{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.659);
+    }
+
+    .popup .content{
+        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        padding: 2rem 0 2rem 0.5rem;
+        box-shadow: 10px 10px 30px 2px #00000049;
+        transition: 1s ease;
+    }
+
+    .popup .content ul{
+        /* border: 1px solid red; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .popup .content ul li{
+        list-style: none;
+        /* border: 1px solid green; */
+        width: inherit;
+        text-align: center;
+        padding: 1rem 0 1rem 0;
+        font-weight: 500;
+    }
+
+    .popup .content ul li a {
+        text-decoration: none;
+        font-family: 'Mulish';
+        font-size: 1.05rem;
+        color: #00002f;
+    }
+
+    .popup .content ul li:hover{
+        font-weight: 600;
+        background-color: #08b74e43;        
+        border-left: 3px solid #00002f;
+    }
+
+    .popup.active{
+        display: block;
+    }
+
+    #registerBtn{
+        padding: 0.5rem 1.5rem;
+        border-radius: 10px;
+        border: 2px solid #00002f;
+        background-color: #08b74e1c;
+        font-size: 1rem;
+        font-family: "Poppins";
+        font-weight: 500;
+        color: #00002f;
+    }
+
+    .close-btn{
+        position: absolute;
+        top: 1.35rem;
+        left: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #08b74f;
+        background-color: #00002f;
+        padding: 1rem;
+        width: 10px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    /* ADD QUESTION CSS */
+    .add-question{
+        width: 100%;
+        height: 20vh;
+        /* border: 1px solid red; */
+        box-shadow: 1px 1px 10px 1px #9b9a9a17;
+        padding: 1rem;
+    }
+
+    .add-question textarea{
+        width: 100%;
+        height: 10vh;
+        margin-bottom: 0.5rem;
+    }
+
+    .add-question button{
+        padding: 0.3rem 0.5rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #00002f;
+        background-color: transparent;
+        border: 1px solid #00002f;
+        border-radius: 5px;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .add-question button:hover{
+        background-color: #08b74eaa;
+        color: #00002f;
+    }
+
+    /* FEED SECTION */
+
+    .feed-container{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+    }
+
+    .feed-container .feed{
+        width: inherit;
+        height: auto;
+        /* border: 1px solid green; */
+        padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+        box-shadow: 20px 2px 10px 5px #9b9a9a0a;
+        margin-bottom: 1rem;
+    }
+
+    .feed-container .feed .user-image{
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .feed-container .feed .user-image p{
+        font-family: "Mulish";
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #9b9a9a;
+    }
+
+    .feed-container .feed .user-image img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .feed-container .feed .user-text .feed-stat{
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .feed-container .feed .user-text .feed-stat .material-symbols-rounded{
+        width: 10px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0, 0, 47, 0.738);
+        font-size: 1rem;
+        font-weight: 600;
+        text-shadow: 2px 2px 2px #00002f2c;
+        /* border: 1px solid red; */
+        padding: 0.3rem;
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote span{
+        font-family: "Poppins";
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote .upvote{
+        color: rgb(44, 143, 255);
+    }
+
+    .feed-container .feed .user-text .feed-stat .vote .downvote{
+        color: red;
+    }
+
+    .feed-container .feed .user-text a{
+        text-decoration: none;
+    }
+
+    .feed-container .feed .user-text h3{
+        font-family: "Mulish";
+        font-size: 0.9rem;
+        color: #08b74f;
+        letter-spacing: 0.8px;
+    }
+
+    /* ABOUT SECTION */
+    .about-container{
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid red; */
+    }
+
+    .about-container .about-header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-container .about-header img{
+        width: inherit;
+        height: inherit;
+    }
+
+    .about-container .about-header h2{
+        position: absolute;
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        width: 79%;
+        height: auto;
+        text-align: center;
+        /* border: 1px solid red; */
+        font-family: "Mulish";
+        font-weight: 600;
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    .about-container .about-header h2 b{
+        font-family: "Poppins";
+        color: #08b74f;
+        font-size: 20px;
+    }
+
+    .about-container h2{
+        font-family: "Poppins";
+        color: #00002f;
+        font-size: 1.05rem;
+        margin-top: 1rem;
+    }
+
+    .about-container b{
+        font-family: "Poppins";
+        color: #08b74f;
+        font-size: 1.05rem;
+    }
+
+    .about-carousel{
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        background-color: #00002f21;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    .about-carousel .about-slide{
+        width: inherit;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        line-height: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.23);
+    }
+
+    .about-slide span{
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+        font-family: "Poppins";
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #08b74f;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.285);
+    }
+
+    .about-slide p{
+        text-align: center;
+        padding: 1rem;
+        font-family: "Mulish";
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #00002f;
+    }
+
+    .about-slide .slide-text{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-slide .slide-text .left{
+        /* border: 1px solid green; */
+        width: 50%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 1px 1px 20px 5px #9b9a9a29;
+        margin-top: 10px;
+    }
+
+    .about-slide .slide-text .left span{
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+
+    .about-slide .slide-text .left .term-up-p{
+        font-size: 1rem;
+        font-size: 400;
+        color: rgb(44, 143, 255);
+    }
+
+    .term-upvote{
+        background-color: rgba(44, 143, 255, 0.185);
+        padding: 1rem;
+        border-radius: 50%;
+        color: rgb(44, 143, 255) !important;
+        font-weight: 600 !important;
+    }
+
+    .term-upvote b{
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: rgb(44, 143, 255);
+    }
+
+    .term-downvote{
+        background-color: rgba(255, 0, 0, 0.264);
+        padding: 1rem;
+        border-radius: 50%;
+        color: red !important;
+        font-weight: 600 !important;
+    }
+
+    .term-downvote b{
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: red;
+    }
+
+    .term-down-p{
+        color: red !important;
+    }
+
+    .slide-desc{
+        text-align:justify !important;
+    }
+
+    .terminology{
+        text-align: right;
+    }
+
+    .team-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* border: 1px solid green; */
+        margin-top: 1rem;
+        gap: 2rem;
+        /* padding: 0 2rem; */
+    }
+
+    .team-member{
+        width: 80%;
+        height: 50vh;
+        border: 1px solid #08b74e45;
+        box-shadow: 1px 1px 20px 5px #9b9a9a29;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .team-member .image{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 8px 5px #9b9a9a29;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .team-member .image img{
+        width: inherit;
+        height: inherit;
+        border: 4px solid #00002f;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+
+    .team-member .name{
+        width: auto;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .team-member .name h3{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        color: #08b74f;
+        font-weight: 700;
+    }
+
+    .team-member .role{
+        width: auto;
+        text-align: center;
+        margin-top: 0.2rem;
+    }
+
+    .team-member .role p{
+        font-size: 0.8rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #00002f82;
+    }
+
+    /* Contact CSS */
+    .contact-container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+
+    .contact-container .contact-header{
+        width: 100%;
+        height: 30vh;
+        /* border: 1px solid red; */
+        position: relative;
+    }
+
+    .contact-container .contact-header img{
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+    }
+
+    .contact-container .contact-form{
+        width: 80%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+        position: absolute;
+        top: 10rem;
+        box-shadow: 1px 1px 8px 5px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .contact-container .contact-form h2{
+        font-size: 1.2rem;
+        font-family: "Mulish";
+        font-weight: 700;
+        color: #00002f;
+    }
+
+    .contact-container .contact-form h2 b{
+        font-size: 1.2rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #08b74f;
+    }
+    
+    .contact-container .contact-form form{
+        width: 80%;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .contact-container .contact-form form input, textarea{
+        width: 100%;
+        padding: 0.5rem;
+        color: #00002f;
+        font-family: "Poppins";
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 4px 5px 4px 1px #00002f0b;
+        border: 1px solid #00002f64;
+        transition: .3s ease-in-out;
+        resize: none;
+    }
+
+    .contact-container .contact-form form textarea{
+        height: 15vh;
+    }
+
+    .contact-container .contact-form form input:focus, textarea:focus{
+        box-shadow: 8px 8px 1px 1px rgba(0, 0, 0, 0.149);
+    }
+
+    .contact-container .contact-form form button{
+        font-family: "Mulish";
+        padding: 0.5rem 1.5rem;
+        background-color: #00002f;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        transition: .2s ease;
+    }
+
+    .contact-container .contact-form form button:hover{
+        background-color: #08b74f;
+        color: #00002f;
+        font-size: 700;
+    }
+
+    /* Register CSS */
+    .register-container-main {
+        width: 100%;
+        height: auto;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        /* border: 1px solid red; */
+        margin-top: 2rem;
+    }
+
+    .register-container-main .register-container {
+        width: 100%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .register-container-main .register-container .register-image-section{
+        display: none;
+    }
+
+    .register-container-main .register-container .register-form-section {
+        width: 100%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+    .register-container-main .register-container .register-form-section .external-buttons {
+        width: auto;
+        border-radius: 50px;
+        border: 1px solid rgba(0, 0, 47, 0.337);
+        box-shadow: 1px 1px 5px 5px rgba(155, 154, 154, 0.055);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: .75rem;
+        margin-top: 2rem;
+        position: relative;
+    }
+
+    .register-container-main .register-container .register-form-section .external-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 47, 0.094);
+        cursor: pointer;
+        transition: .2s ease;
+        /* border: 1px solid red; */
+    }
+
+    .register-container-main .register-container .register-form-section .external-buttons button img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .register-container .register-form-section .external-buttons button:hover {
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 47, 0.337);
+        box-shadow: 1px 1px 5px 5px rgba(155, 154, 154, 0.055);
+    }
+
+    .register-form-section .register-divider{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 75%;
+        /* border: 1px solid red; */
+        font-family: "Poppins";
+        font-weight: 500;
+        color: #00002f5c;
+    }
+
+    .register-form-section .register-divider hr{
+        width: 100%;
+    }
+
+    .register-container-main .register-container .register-form-section .register-section-image {
+        position: absolute;
+        top: -1.05rem;
+        right: 0.5rem;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+    }
+
+    .register-form-section .register-form-container {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin-top: 5em;
+        /* border: 1px solid red; */
+    }
+
+    .register-form-container .form-container {
+        position: inherit;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }
+
+    .register-form-container .form-container button {
+        cursor: pointer;
+        outline: none;
+        text-transform: capitalize;
+        transition: 0.5s ease;
+        z-index: 2;
+    }
+
+    .register-form-container .form-container .form-toggle-buttons {
+        position: absolute;
+        top: -3rem;
+        /* border: 1px solid red; */
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+
+    .register-form-container .form-container .form-toggle-buttons button {
+        border: none;
+        border-radius: 20px 20px 0 0;
+        padding: 0.8rem;
+        font-family: "Poppins";
+        font-weight: 500;
+        transition: 0.2s ease;
+        color: #00002f;
+    }
+
+    .form-container .form-toggle-buttons #sign-in-toggle {
+        box-shadow: 1px 1px 8px 2px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px 10px 0 0; 
+    }
+
+    .form-container .form-toggle-buttons #sign-up-toggle {
+        box-shadow: 1px 1px 8px 2px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .register-form-container .form-container .sign-in,
+    .register-form-container .form-container .sign-up {
+        font-family: "Mulish";
+        padding: 0.5rem 1.5rem;
+        background-color: #00002f;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        margin: auto;
+        transition: .2s ease;
+    }
+
+    .form-container .sign-in:hover,
+    .form-container .sign-up:hover {
+        background-color: #08b74f;
+        color: #00002f;
+        font-size: 700;
+    }
+
+    .register-form-container .form-container form {
+        position: relative;
+        width: 100%;
+        padding: 2em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 8px 5px #9b9a9a29;
+        background-color: #ffffff;
+        border-radius: 10px;
+        gap: 0.8rem;
+    }
+
+    .form-container input {
+        position: relative;
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 1.2em 1.7em;
+        color: #00002f;
+        font-family: "Poppins";
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 4px 5px 4px 1px #00002f0b;
+        border: 1px solid #00002f64;
+        transition: .3s ease-in-out;
+        transition: 0.2s;
+    }
+
+    .form-container input:focus {
+        box-shadow: 8px 8px 1px 1px rgba(0, 0, 0, 0.149);
+    }
+
+    .form-container #sign-in-form,
+    .form-container #sign-up-form {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    .form-container #sign-in-form button,
+    .form-container #sign-up-form button {
+        margin-top: 0.5em;
+    }
+
+    .form-container #sign-in-form a {
+        font-family: "Mulish";
+        font-size: 0.7em;
+        color: #08B74F;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        transition: 0.3s;
+    }
+
+    .form-container #sign-in-form a:hover {
+        color: #00002f;
+    }
+
+    .form-container #sign-up-form {
+        display: none;
+    }
+
+    .form-container #sign-up-form .terms-check {
+        display: flex;
+        margin-top: 0.2em;
+        margin-bottom: 1em;
+    }
+
+    .form-container #sign-up-form .terms-check input {
+        margin: 0;
+        width: 6%;
+    }
+
+    .form-container #sign-up-form .terms-check h5 {
+        margin-left: 5px;
+        font-weight: 300;
+        color: #00002f;
+        font-family: "Mulish";
+        font-size: 0.8em;
+    }
+
+    .form-container #sign-up-form .terms-check h5 a {
+        font-family: "Mulish";
+        color: #08B74F;
+        font-weight: 400;
+        transition: 0.3s;
+    }
+
+    .form-container #sign-up-form .terms-check h5 a:hover {
+        color: #00002f;
+    }
+
+    /* Vote CSS */
+    .vote-container{
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .vote-container hr{
+        width: 80%;
+
+    }
+
+    .vote-container h4{
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        color: #00002f;
+        font-weight: 800;
+    }
+
+    .vote-container .opinion-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        border: 1px solid #08b74e45;
+        box-shadow: 1px 1px 10px 1px #9b9a9a17;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+    }
+
+    .vote-container .opinion-section .opinion-answer{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .opinion-answer .user-image{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .opinion-answer .user-image img{
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        border: 3px solid green;
+        object-fit: cover;
+    }
+
+    .opinion-answer .opinion{
+        width: 100%;
+        height: auto;
+    }
+
+    .opinion-answer .opinion h3{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #00002f;
+        display: flex;
+        align-items:last baseline;
+        justify-content: space-between;
+    }
+
+    .opinion-answer .material-symbols-rounded{
+        width: 10px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #08B74F;
+        font-size: 1rem;
+        font-weight: 400;
+        /* text-shadow: 2px 2px 2px #00002f2c; */
+        /* border: 1px solid red; */
+        padding: 0.3rem;
+    }
+
+    .opinion-section .opinion-stat{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        padding: 0.5rem;
+    }
+
+    .opinion-section .opinion-stat .opinion-publish-date{
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .opinion-stat .opinion-publish-date p{
+        font-size: 0.6rem;
+        font-weight: 400;
+        color: #9b9a9a;
+        font-family: "Mulish";
+    }
+
+    .opinion-stat .opinion-vote{
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .opinion-stat .opinion-vote span{
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .opinion-stat .opinion-vote span.upvote{
+        color: rgb(44, 143, 255);
+        text-shadow: 2px 2px 1px #00002f1a;
+    }
+
+    .opinion-stat .opinion-vote span.downvote{
+        color: #ff0000;
+        text-shadow: 2px 2px 1px #00002f1a;
+    }
+
+    /* Upvote & Downvote CSS */
+
+    .vote-opinion{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 0.5rem;
+        padding: 0 0.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .vote-opinion .vote-feed{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #00002f0b;
+    }
+
+    .vote-opinion .vote-feed h5{
+        /* border: 1px solid green; */
+        width: 100%;
+        line-height: 1rem;
+        font-weight: 400;
+        font-family: "Poppins";
+        color: #00002f;
+        margin-bottom: 0.6rem;
+    }
+
+    .vote-opinion-buttons{
+        /* border: 1px solid red; */
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .vote-opinion-buttons button{
+        padding: 0.1rem 0.5rem;
+        display: flex;
+        border-radius: 5px;
+        font-weight: 500;
+        font-family: "Poppins";
+    }
+
+    .vote-opinion-buttons .opinion-upvote{
+        background-color: rgba(44, 143, 255, 0.129);
+        color: rgb(44, 143, 255);
+        border: 1px solid rgb(44, 143, 255);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+        transition: .3s ease;
+        font-weight: 700;
+    }
+    
+    .vote-opinion-buttons .opinion-downvote{
+        background-color: rgba(255, 0, 0, 0.264);
+        color: red;
+        border: 1px solid red;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+        font-weight: 700;
+        transition: .3s ease;
+    }
+
+    .vote-opinion-buttons .opinion-downvote:hover{
+        background-color: red;
+        color: #ffffff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+    }
+
+    .vote-opinion-buttons .opinion-upvote:hover{
+        background-color: rgb(44, 143, 255);
+        color: #ffffff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.161);
+    }
+
+    .new-opinion{
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+        /* border: 1px solid red; */
+    }
+
+    .new-opinion textarea{
+        width: 100%;
+        height: 10vh;
+    }
+
+    .new-opinion button{
+        padding: 0.3rem 0.5rem;
+        font-family: "Mulish";
+        font-weight: 800;
+        color: #00002f;
+        background-color: transparent;
+        border: 1px solid #00002f;
+        border-radius: 5px;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+
+    .new-opinion button:hover{
+        background-color: #08b74eaa;
+        color: #00002f;
+    }
+
+    /* Comment CSS */
+
+    .comment-section{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        margin-top: 1rem;
+    }
+
+    .comment-section h5{
+        /* border: 1px solid red; */
+        width: auto;
+        color: #00002f;
+        display: flex;
+        align-items: first baseline;
+        gap: 0.2rem;
+    }
+
+    .comment-section h5 b{
+        color: #08B74F;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .comment-section .comments{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        gap: 0.5rem;
+        border: 1px solid #00002f0b;
+        padding: 0.5rem;
+    }
+
+    .comment-section .comments .opinion-comment{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .comment-section .comments .opinion-comment .image{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .comment-section .comments .opinion-comment .image img{
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        object-fit: cover;
+        border: 1px solid #08b74f;
+    }
+
+    .comment-section .comments .opinion-comment p{
+        color: #00002fd2;
+        font-size: 0.75rem;
+        font-weight: 400;
+        font-family: "Poppins";
+    }
+
+    .comment-section .new-comment{
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+        padding: 1rem;
+    }
+
+    .comment-section .new-comment textarea{
+        width: 100%;
+        height: 14vh;
+        margin-bottom: 0.5rem;
+    }
+
+    .comment-section .new-comment button{
+        padding: 0.3rem 0.5rem;
+        font-family: "Mulish";
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #00002f;
+        border: none;
+        border-radius: 5px;
+        transition: .3s ease;
+    }
+
+    .comment-section .new-comment button:hover{
+        background-color: #08b74eaa;
+        color: #00002f;
+        font-weight: 800;
+    }
+    
+
+    /* Swiper Button CSS */
+    .slide-nav{
+        height: 30px;
+        width: 30px;
+        background-color: #00002f36;
+        border-radius: 5px;
+        /* transform: translateY(30px); */
+        transition: 0.2s ease;
+    }
+
+    .slide-nav:hover{
+        background-color: #00002f;
+    }
+
+    .slide-nav::after,
+    .slide-nav::before {
+        font-size: 15px;
+        color: #08b74f;
+    }
+
+    .swiper-pagination-bullet{
+        background-color: #00002f6b;
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: #08b74f;
+    }
+
+}
+
+/* @media  screen and (max-width: 500px){
+    
+    
+} */
+
+/* @media (min-width: 500px){
+    
+} */
+
+/* @media (width: 820px){
+
+} */
+
+
+/* @media (min-width: 650px){
+    
+} */
