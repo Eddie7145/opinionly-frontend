@@ -8,6 +8,10 @@ const signupForm = document.getElementById("sign-up-form");
 const searchBtn = document.querySelector(".search-btn");
 const searchBox = document.querySelector(".search-box");
 
+// SHARE VARIABLES
+const shareBtn = document.querySelector(".sharebutton");
+const shareBox = document.querySelector(".share-container");
+
 // MENU VARIABLES
 const menuBtn = document.querySelector(".menu");
 const popUp = document.querySelector(".popup");
@@ -38,6 +42,11 @@ function toggleSignIn(){
 // SEARCH SCRIPT
 function searchToggle(){
   searchBox.classList.toggle("hide");
+}
+
+// SHARE TOGGLE
+function shareToggle(){
+  shareBox.classList.toggle("hide");
 }
 
 // MENU SCRIPT

@@ -84,7 +84,7 @@ body{
         border-radius: 10px;
         background-color: transparent;
         padding: 0.5rem 1.5rem;
-        font-family: 'poppins';
+        font-family: 'Mulish';
         font-weight: 500;
         color: #00002f;
         cursor: pointer;
@@ -235,6 +235,7 @@ body{
         text-shadow: 2px 2px 2px #00002f2c;
         /* border: 1px solid red; */
         padding: 0.3rem;
+        cursor: pointer;
     }
 
     .feed-container .feed .user-text .feed-stat .vote span{
@@ -799,7 +800,7 @@ body{
         border: none;
         border-radius: 20px 20px 0 0;
         padding: 0.8rem;
-        font-family: "Poppins";
+        font-family: "Mulish";
         font-weight: 500;
         transition: 0.2s ease;
         color: #00002f;
@@ -1023,6 +1024,7 @@ body{
         /* text-shadow: 2px 2px 2px #00002f2c; */
         /* border: 1px solid red; */
         padding: 0.3rem;
+        cursor: pointer;
     }
 
     .opinion-section .opinion-stat{
@@ -1066,6 +1068,87 @@ body{
     .opinion-stat .opinion-vote span.downvote{
         color: #ff0000;
         text-shadow: 2px 2px 1px #00002f1a;
+    }
+
+     /* Share CSS */
+
+     .share-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 20%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.935);
+        border-radius: 10px 0 10px 10px;
+        box-shadow: 1px 1px 5px 5px rgba(94, 94, 94, 0.156);
+        padding: 0.5rem;
+        position: absolute;
+        right: 2.5rem;
+        top: 8rem;
+        z-index: 1;
+    }
+
+    .share-copy{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .share-copy input{
+        width: 80%;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        border-radius: 30px 0 0 30px;
+        border: 1px solid #00002fb8;
+        outline: none;
+        color: #00002f;
+    }
+
+    .share-copy button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        padding: 0.6rem 0.6rem 0.55rem 0;
+        border: none;
+        border-radius: 0 30px 30px 0;
+        background-color: #00002f;
+        cursor: pointer;
+    }
+
+    .share-copy button span{
+        color: #08b74f;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .share-social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+    }
+
+    .share-social .social-container{
+        display: flex;
+        align-content: center;
+        gap: 1rem;
+        /* width: 100%; */
+        /* border: 1px solid red; */
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .socials{
+        cursor: pointer;
+    }
+
+    .share-social .social-container::-webkit-scrollbar{
+        width: 0;
+        height: 0;
     }
 
     /* Upvote & Downvote CSS */
@@ -1469,7 +1552,7 @@ body{
         border: 2px solid #00002f;
         background-color: #08b74e1c;
         font-size: 1rem;
-        font-family: "Poppins";
+        font-family: "Mulish";
         font-weight: 500;
         color: #00002f;
     }
@@ -2099,7 +2182,7 @@ body{
         border: none;
         border-radius: 20px 20px 0 0;
         padding: 0.8rem;
-        font-family: "Poppins";
+        font-family: "Mulish";
         font-weight: 500;
         transition: 0.2s ease;
         color: #00002f;
@@ -2305,6 +2388,7 @@ body{
         display: flex;
         align-items:last baseline;
         justify-content: space-between;
+        position: relative;
     }
 
     .opinion-answer .material-symbols-rounded{
@@ -2316,7 +2400,7 @@ body{
         color: #08B74F;
         font-size: 1rem;
         font-weight: 400;
-        /* text-shadow: 2px 2px 2px #00002f2c; */
+        text-shadow: 2px 2px 2px #00002f2c;
         /* border: 1px solid red; */
         padding: 0.3rem;
     }
@@ -2362,6 +2446,82 @@ body{
     .opinion-stat .opinion-vote span.downvote{
         color: #ff0000;
         text-shadow: 2px 2px 1px #00002f1a;
+    }
+
+    /* Share CSS */
+
+    .share-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 50%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.935);
+        border-radius: 10px 0 10px 10px;
+        box-shadow: 1px 1px 5px 5px rgba(94, 94, 94, 0.156);
+        padding: 0.5rem;
+        position: absolute;
+        right: 1.2rem;
+        top: 7.5rem;
+        z-index: 1;
+    }
+
+    .share-copy{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .share-copy input{
+        width: 80%;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        border-radius: 30px 0 0 30px;
+        border: 1px solid #00002fb8;
+        outline: none;
+        color: #00002f;
+    }
+
+    .share-copy button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        padding: 0.6rem 0.6rem 0.55rem 0;
+        border: none;
+        border-radius: 0 30px 30px 0;
+        background-color: #00002f;
+    }
+
+    .share-copy button span{
+        color: #08b74f;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .share-social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+    }
+
+    .share-social .social-container{
+        display: flex;
+        align-content: center;
+        gap: 1rem;
+        /* width: 100%; */
+        /* border: 1px solid red; */
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .share-social .social-container::-webkit-scrollbar{
+        width: 0;
+        height: 0;
     }
 
     /* Upvote & Downvote CSS */
@@ -2564,6 +2724,8 @@ body{
         color: #00002f;
         font-weight: 800;
     }
+
+    
     
 
     /* Swiper Button CSS */
@@ -2611,5 +2773,9 @@ body{
 
 
 /* @media (min-width: 650px){
+
+
     
 } */
+
+/* Quora: #B92B27 Reddit: #FF4500 Twitter :#00acee Instagram Yellow: Hex: #fccc63 RGB: 252, 204, 99. Instagram Orange: Hex: #fbad50 RGB: 251, 173, 80. Instagram Maroon: Hex: #cd486b RGB: 205, 72, 107. Instagram Blue: Hex: #4c68d7 RGB: 76, 104, 215. */
